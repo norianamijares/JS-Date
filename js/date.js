@@ -4,6 +4,16 @@ const secondHTML = document.getElementById("segundo");
 const dateHTML = document.getElementById("text");
 
 const fechaInicial = new Date();
+
+// Método para formatear fecha en español usando la API Intl -> Internationalization
+const formateador = new Intl.DateTimeFormat("es-AR", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+})
+
+console.log(formateador.format(fechaInicial))
+
 pintarReloj(fechaInicial)
 pintarTextoFecha(fechaInicial)
 
